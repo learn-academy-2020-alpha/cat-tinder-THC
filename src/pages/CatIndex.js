@@ -5,12 +5,17 @@ import { ListGroup, ListGroupItemHeading, ListGroupItemText }
 
 
 class CatIndex extends Component{
-
-
+    constructor(props) {
+      super(props)
+      this.state = {
+        allCats: cats
+      }
+    }
     render(){
         return(
           <React.Fragment>
-          { this.props.cats.map((cat, index) => {
+            <div>
+          {this.state.allCats.map((cat, index) => {
             return(
               <ListGroup key={ index }>
                 <h4>{ cat.name }</h4>
@@ -18,6 +23,7 @@ class CatIndex extends Component{
               </ListGroup>
               )
             })}
+            </div>
           </React.Fragment>
         )
       }

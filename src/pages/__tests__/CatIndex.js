@@ -12,6 +12,7 @@ it('CatIndex renders without crashing', () => {
   ReactDOM.render(<CatIndex />, div)
 })
 
+
 it('Renders the cats', ()=>{
   const component = mount(<CatIndex cats={ cats }/>)
   const headings = component.find('h4')
