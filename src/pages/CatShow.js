@@ -19,8 +19,8 @@ class CatShow extends Component {
         <div>
             <ListGroup>
                 <h4>{cat.name}</h4>
-                <small>{cat.age}</small>
-                <small>{cat.enjoys}</small>
+                <h5>Age: {cat.age}</h5>
+                <h5>Bio: {cat.enjoys}</h5>
             </ListGroup>
         </div>
     )
