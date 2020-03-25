@@ -1,7 +1,10 @@
 import React, {Component} from "react"
-import { ListGroup, ListGroupItemHeading, ListGroupItemText }
+import { ListGroup, Button }
  from 'reactstrap'; 
- import cats from '../cats'
+import cats from '../cats'
+import {Link} from "react-router-dom"
+import CrazyCat from "./crazyCat.png"
+
 
 
 class CatIndex extends Component{
@@ -15,14 +18,25 @@ class CatIndex extends Component{
         return(
           <React.Fragment>
             <div>
+            <Link to="/catCreate/" id="button"><Button>Add New Cat</Button></Link>
+            <br/>
+            <br/>
+            <br/>
+            <div id="center">
           {this.state.allCats.map((cat, index) => {
             return(
-              <ListGroup key={ index }>
-                <h4>{ cat.name }</h4>
-                <small>{ cat.age } - { cat.enjoys }</small>
+              <ListGroup id="box" key={ index }>
+                <Link to={`/cat/${cat.id}`}><h4> { cat.name }</h4></Link>
+                <br/>
+                <img src={CrazyCat}/>
+                <br/>
+                <small>Age:{ cat.age }  </small>
+                <br/>
+                <small>Bio: { cat.enjoys} </small>
               </ListGroup>
               )
             })}
+            </div>
             </div>
           </React.Fragment>
         )
