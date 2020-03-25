@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button }
 from 'reactstrap';
-import {Link} from "react-router-dom"
+import {Link, Route, BrowserRouter as Router} from "react-router-dom"
+import cats from '../cats'
 
 
 class CatShow extends Component {
@@ -30,7 +31,7 @@ class CatShow extends Component {
     render() {
     return (
     <>
-      <Link to="/" id="button"><Button>Back Home</Button></Link>
+      <Router><Link to="/" id="button"><Button>Back Home</Button></Link></Router>
       <br/>
       <br/>
       <Form>

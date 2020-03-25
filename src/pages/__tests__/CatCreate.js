@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import CatCreate from '../CatCreate'
+import cats from '../../cats'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -26,7 +27,7 @@ it('has a age input', ()=>{
 it('has a enjoys input', ()=>{
   const component = mount(<CatCreate />)
   // looks for an id of enjoys on the label tag
-  expect(component.find('label#enjoys').text()).toBe("Enjoys")
+  expect(component.find('label#enjoys').text()).toBe("Hobby")
 })
 
 it('has a submit button', ()=>{
