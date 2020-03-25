@@ -34,7 +34,7 @@ class CatShow extends Component {
       <br/>
       <br/>
       <Form>
-        <FormGroup>
+        <FormGroup id="form">
           <Label htmlFor="name" id="name">Name</Label>
           <Input
             type="text"
@@ -51,7 +51,7 @@ class CatShow extends Component {
             value={ this.state.form.age }
           />
           <br/>
-          <Label htmlFor="enjoys" id="enjoys">Enjoys</Label>
+          <Label htmlFor="enjoys" id="enjoys">Hobby</Label>
           <Input
             type="text"
             name="enjoys"

@@ -26,13 +26,13 @@ class CatIndex extends Component{
           {this.state.allCats.map((cat, index) => {
             return(
               <ListGroup id="box" key={ index }>
-                <Link to={`/cat/${cat.id}`}><h4> { cat.name }</h4></Link>
+                <Link to={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></Link>
                 <br/>
                 <img src={CrazyCat}/>
                 <br/>
-                <small>Age:{ cat.age }  </small>
+                <small>Age: { cat.age }  </small>
                 <br/>
-                <small>Bio: { cat.enjoys} </small>
+                <small>Hobby: { cat.enjoys} </small>
               </ListGroup>
               )
             })}

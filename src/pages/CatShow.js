@@ -20,14 +20,17 @@ class CatShow extends Component {
         <>
         <Link to="/" id="button"><Button>Back Home</Button></Link>
         <div id="middle">
-            <ListGroup class="description">
+            <ListGroup>
                 <br/>
                 <br/>
                 <img src={CrazyCat}/>
                 <br/>
+            <div id= "box">
                 <h4>{cat.name}</h4>
-                <h5>Age: {cat.age}</h5>
-                <h5>Bio: {cat.enjoys}</h5>
+                <small>Age: {cat.age}</small>
+                <br/>
+                <small>Hobby: {cat.enjoys}</small>
+            </div>
             </ListGroup>
         </div>
         </>

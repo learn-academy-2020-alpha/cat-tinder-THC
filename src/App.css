@@ -4,27 +4,24 @@ h1 {
 }
 
 #box {
-    width: 300px;
+    width: 200px;
     height: 300px;
     /* border: 1px black solid; */
     display: inline-block;
-    margin: 10px;
+    margin: auto;
     align-items: center;
-    padding: 15px;
+
     
 }
 
 #button {
     /* border: 1px black solid; */
-    margin: 10px;
-    position: absolute; 
-    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 3.5em;
 }
 
-.description {
-    margin-left: 20px;
-    padding: 20px;
-}
 
 img {
     width: 200px;
@@ -45,4 +42,15 @@ img {
     display: flex;
     align-self: center;
     margin: auto;
+}
+#form{
+    margin: 100px;
+}
+#submit{
+    display: flex;
+    align-self: center;
+    margin: auto;
+}
+#name{
+    text-align: center;
 }
