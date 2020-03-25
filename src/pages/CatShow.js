@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {ListGroup, Button} from 'reactstrap';
 import cats from '../cats'
-import {Link, Router} from "react-router-dom"
+import {Link, BrowserRouter as Router} from "react-router-dom"
 import CrazyCat from "./crazyCat.png"
 
 
