@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {ListGroup, Button} from 'reactstrap';
 import cats from '../cats'
-import {Link} from "react-router-dom"
+import {Link, Router} from "react-router-dom"
 import CrazyCat from "./crazyCat.png"
 
 
@@ -18,7 +18,9 @@ class CatShow extends Component {
         const cat = this.state.cats.find((v) => v.id === parseInt(id))
     return (
         <>
+        <Router>
         <Link to="/" id="button"><Button>Back Home</Button></Link>
+        
         <div id="middle">
             <ListGroup>
                 <br/>
@@ -33,6 +35,7 @@ class CatShow extends Component {
             </div>
             </ListGroup>
         </div>
+        </Router>
         </>
     )
     }

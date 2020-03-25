@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import CatCreate from '../CatCreate'
+import cats from '../../cats'
 
 Enzyme.configure({ adapter: new Adapter() })
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button }
 from 'reactstrap';
 import {Link} from "react-router-dom"
-
+import cats from "../cats"
 
 class CatShow extends Component {
     constructor(props) {
