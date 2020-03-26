@@ -30,7 +30,7 @@ class CatShow extends Component {
     render() {
     return (
     <>
-      <Router><Link to="/" id="button"><Button>Back Home</Button></Link></Router>
+      <a href ="/" id="button"><Button>Back Home</Button></a>
       <br/>
       <br/>
       <Form>

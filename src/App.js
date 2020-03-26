@@ -12,10 +12,27 @@ class App extends Component{
   constructor(){
    super()
    this.state = {
-     allCats: cats
+     allCats: cats,
+     cats: [],
    }
-
+   this.getCats()
  }
+
+ componentWillMount(){
+    	this.getCats()
+    }
+
+    getCats = () => {
+      fetch("http://localhost:3000/cats")
+      .then((response)=>{
+        if(response.status === 200){
+          return(response.json())
+        }
+      })
+      .then((catsArray)=> {
+        this.setState({cats: catsArray})
+      })
+    }
 
   render(){
     return(

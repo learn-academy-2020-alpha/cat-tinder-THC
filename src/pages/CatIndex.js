@@ -17,10 +17,10 @@ class CatIndex extends Component{
     render(){
         return(
           <React.Fragment>
-            <Router>
-              <Switch>
+
+
               <div>
-              <Link to="/catCreate/" id="button"><Button>Add New Cat</Button></Link>
+              <a href ="/catCreate/" id="button"><Button>Add New Cat</Button></a>
               <br/>
               <br/>
               <br/>
@@ -28,7 +28,7 @@ class CatIndex extends Component{
             {this.state.allCats.map((cat, index) => {
               return(
                 <ListGroup id="box" key={ index }>
-                  <Link to={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></Link>
+                  <a href ={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></a>
                   <br/>
                   <img src={CrazyCat}/>
                   <br/>
@@ -40,8 +40,8 @@ class CatIndex extends Component{
               })}
               </div>
               </div>
-              </Switch>
-            </Router>
+
+
           </React.Fragment>
         )
       }
