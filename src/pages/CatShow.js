@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import {ListGroup, Button} from 'reactstrap';
 import cats from '../cats'
-import {Link, BrowserRouter as Router} from "react-router-dom"
+import {Link, Route, Switch, BrowserRouter as Router} from "react-router-dom"
 import CrazyCat from "./crazyCat.png"
+import CatIndex from './CatIndex'
+import CatCreate from './CatCreate'
 
 
 class CatShow extends Component {
@@ -18,8 +20,8 @@ class CatShow extends Component {
         const cat = this.state.cats.find((v) => v.id === parseInt(id))
     return (
         <>
-
-        <a href ="/" id="button"><Button>Back Home</Button></a>
+        <Router>
+        <Link to="/" id="button"><Button>Back Home</Button></Link>
 
         <div id="middle">
             <ListGroup>
@@ -35,7 +37,12 @@ class CatShow extends Component {
             </div>
             </ListGroup>
         </div>
-        
+
+          <Switch>
+            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.allCats } /> } />
+            <Route exact path="/catcreate" render={ (props) =>   <CatCreate cats={ this.state.allCats } /> } />
+          </Switch>
+        </Router>
         </>
     )
     }
