@@ -4,14 +4,15 @@ from 'reactstrap';
 import cats from "../cats"
 import {Link, Route, BrowserRouter as Router} from "react-router-dom"
 
-class CatShow extends Component {
+class CatCreate extends Component {
     constructor(props) {
         super(props)
         this.state = {
+          success: false,
           form:{
             name: '',
             age: '',
-            enjoys: ''
+            hobby: ''
         }
       }
     }
@@ -24,7 +25,11 @@ class CatShow extends Component {
 
     handleSubmit = (e) => {
       e.preventDefault()
-      console.log(this.state.form);
+      // console.log(this.state.form);
+      this.props.handleSubmit(this.state.form)
+      this.setState({
+      success: true
+    })
     }
 
     render() {
@@ -66,4 +71,4 @@ class CatShow extends Component {
     )}
 }
 
-export default CatShow
+export default CatCreate

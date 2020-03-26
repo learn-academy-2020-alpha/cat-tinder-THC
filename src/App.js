@@ -43,7 +43,7 @@ class App extends Component{
           <Switch>
             <Route exact path="/cat/:id" component={ CatShow }
               render={ (props) => <CatIndex cats={ this.state.allCats }/> }/>
-            <Route exact path="/catCreate" render={ (props) =>   <CatCreate cats={ this.state.allCats } /> } />
+            <Route exact path="/catcreate" render={ (props) =>   <CatCreate cats={ this.state.allCats } /> } />
             <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.allCats } /> } />
           </Switch>
         </Router>
