@@ -33,6 +33,24 @@ class App extends Component{
         this.setState({cats: catsArray})
       })
     }
+    createCat = (newcat) => {
+      return fetch("http://localhost:3000/cats", {
+        // converting an object to a string
+        body: JSON.stringify(newcat),
+        // specify the info being sent in JSON and the info returning should be JSON
+        headers: {
+          "Content-Type": "application/json"
+        },
+        // HTTP verb so the correct endpoint is invoked on the server
+        method: "POST"
+      })
+      .then((response) => {
+        // if the response is good call the getCats method
+        if(response.ok){
+          return this.getCats()
+        }
+      })
+    }
 
   render(){
     return(
@@ -43,7 +61,7 @@ class App extends Component{
           <Switch>
             <Route exact path="/cat/:id" component={ CatShow }
               render={ (props) => <CatIndex cats={ this.state.allCats }/> }/>
-            <Route exact path="/catcreate" render={ (props) =>   <CatCreate cats={ this.state.allCats } /> } />
+            <Route exact path="/catcreate" render={ (props) =>   <CatCreate handleSubmit={ this.createCat } /> } />
             <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.allCats } /> } />
           </Switch>
         </Router>
