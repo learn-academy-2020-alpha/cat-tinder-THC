@@ -9,10 +9,10 @@ import CatShow from "./CatShow"
 
 
 
-class CatIndex extends Component{
-    
-    
+class CatIndex extends Component{ 
+
     render(){
+      console.log("INDEX PROPS", this.props.cats)
         return(
               <Router>
                 <div>
@@ -24,7 +24,7 @@ class CatIndex extends Component{
                     {this.props.cats.map((cat, index) => {
                       return(
                         <ListGroup id="box" key={ index }>
-                          <a href={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></a>
+                          <Link to={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></Link>
                           <br/>
                           <img src={CrazyCat}/>
                           <br/>

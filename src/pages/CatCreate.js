@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button }
 from 'reactstrap';
 import cats from "../cats"
-import {Link, Route, BrowserRouter as Router} from "react-router-dom"
+import {Link, Route, Redirect, BrowserRouter as Router} from "react-router-dom"
 
 class CatCreate extends Component {
     constructor(props) {
@@ -64,7 +64,10 @@ class CatCreate extends Component {
             value={ this.state.form.hobby }
           />
         </FormGroup>
-        <Button type="submit" id="submit" onClick={ this.handleSubmit }>Add New Cat</Button>
+        <Link to="/">
+        <Button type="submit" id="submit" name="submit" onClick={ this.handleSubmit }>Add New Cat</Button>
+        {this.state.success && <Redirect to="./"/>}
+        </Link>
       </Form>
 
     </>

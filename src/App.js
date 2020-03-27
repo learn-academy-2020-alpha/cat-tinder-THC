@@ -1,12 +1,10 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./App.css"
-
 import Header from "./components/Header"
 import CatIndex from "./pages/CatIndex"
 import CatShow from "./pages/CatShow"
 import CatCreate from "./pages/CatCreate"
-import cats from "./cats"
 
 class App extends Component{
   constructor(){
@@ -21,7 +19,7 @@ class App extends Component{
     	this.getCats()
     }
 
-    getCats = () => {
+  getCats = () => {
       fetch("http://localhost:3000/cats")
       .then((response)=>{
         if(response.status === 200){
@@ -52,7 +50,7 @@ class App extends Component{
     }
 
   render(){
-    console.log(this.state.cats);
+    console.log("APP STATES", this.state.cats);
     
     return(
       <>
@@ -62,9 +60,9 @@ class App extends Component{
         <Header />
         <Router>
           <Switch>
-            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.cats } /> } />
-            <Route exact path="/cat/:id" render={ (props) => <CatShow {...props} cats={ this.state.cats }/> }/>
             <Route exact path="/catcreate" render={ (props) => <CatCreate handleSubmit={ this.createCat } /> } />
+            <Route exact path="/cat/:id" render={ (props) => <CatShow {...props} cats={ this.state.cats }/> }/>
+            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.cats } /> } />
           </Switch>
         </Router>
 
