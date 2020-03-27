@@ -43,7 +43,7 @@ img {
 #center {
     display: flex;
     align-self: center;
-    margin: auto;
+    margin: 50px;
 }
 #form{
     margin: 100px;
@@ -58,6 +58,19 @@ img {
 }
 
 h4 {
-    color: rgb(255, 81, 0);
+    color: rgb(97, 97, 97);
+    font-weight: bolder;
 
+}
+
+#logo {
+    margin: auto;
+    width: auto;
+    height: 60px
+}
+
+#sublogo {
+    margin: auto;
+    width: auto;
+    height: 25px;
 }

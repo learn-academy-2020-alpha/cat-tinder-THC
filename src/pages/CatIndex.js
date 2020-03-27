@@ -40,6 +40,9 @@ class CatIndex extends Component{
                     })}
                   </div>
                 </div>
+                <br/>
+                <br/>
+                <br/>
               </Router>
         )
       }
