@@ -20,6 +20,8 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 3.5em;
+    color: rgb(255, 81, 0);
+
 }
 
 
@@ -53,4 +55,9 @@ img {
 }
 #name{
     text-align: center;
+}
+
+h4 {
+    color: rgb(255, 81, 0);
+
 }
