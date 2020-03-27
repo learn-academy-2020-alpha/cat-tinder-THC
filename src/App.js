@@ -55,10 +55,13 @@ class App extends Component{
   render(){
     return(
       <>
+      <br/>
+      <br/>
 
         <Header />
         <Router>
           <Switch>
+            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.allCats } /> } />
             <Route exact path="/cat/:id" component={ CatShow }
               render={ (props) => <CatIndex cats={ this.state.allCats }/> }/>
             <Route exact path="/catcreate" render={ (props) =>   <CatCreate handleSubmit={ this.createCat } /> } />

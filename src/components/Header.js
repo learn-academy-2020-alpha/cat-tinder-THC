@@ -1,10 +1,15 @@
-import React from "react" 
+import React from "react"
 import "../App.css"
+import OkCatnip from './okcatnip.png'
+import Purrfect from './purrfect.png'
 
 const Header = () =>{
         return(
             <>
-            <h1>Cat Tinder</h1>
+            <br/>
+            
+            <img id="logo" src={OkCatnip}/>
+            <img id="sublogo" src={Purrfect}/>
             <br/>
             </>
 

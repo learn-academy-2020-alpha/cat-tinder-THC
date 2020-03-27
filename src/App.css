@@ -20,6 +20,8 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 3.5em;
+    color: rgb(255, 81, 0);
+
 }
 
 
@@ -41,7 +43,7 @@ img {
 #center {
     display: flex;
     align-self: center;
-    margin: auto;
+    margin: 50px;
 }
 #form{
     margin: 100px;
@@ -53,4 +55,22 @@ img {
 }
 #name{
     text-align: center;
+}
+
+h4 {
+    color: rgb(97, 97, 97);
+    font-weight: bolder;
+
+}
+
+#logo {
+    margin: auto;
+    width: auto;
+    height: 60px
+}
+
+#sublogo {
+    margin: auto;
+    width: auto;
+    height: 25px;
 }
