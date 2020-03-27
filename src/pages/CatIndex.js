@@ -10,12 +10,8 @@ import CatShow from "./CatShow"
 
 
 class CatIndex extends Component{
-    constructor(props) {
-      super(props)
-      this.state = {
-        allCats: cats
-      }
-    }
+    
+    
     render(){
         return(
               <Router>
@@ -25,7 +21,7 @@ class CatIndex extends Component{
                   <br/>
                   <br/>
                   <div id="center">
-                    {this.state.allCats.map((cat, index) => {
+                    {this.props.cats.map((cat, index) => {
                       return(
                         <ListGroup id="box" key={ index }>
                           <a href={`/cat/${cat.id}`}><h4 id= "name"> { cat.name }</h4></a>
@@ -34,7 +30,7 @@ class CatIndex extends Component{
                           <br/>
                           <small>Age: { cat.age }  </small>
                           <br/>
-                          <small>Hobby: { cat.enjoys} </small>
+                          <small>Hobby: { cat.hobby} </small>
                         </ListGroup>
                       )
                     })}

@@ -8,16 +8,13 @@ import CatCreate from './CatCreate'
 
 
 class CatShow extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-          cats: cats
-        }
-      }
+    
 
     render() {
         const {id} = this.props.match.params
-        const cat = this.state.cats.find((v) => v.id === parseInt(id))
+        console.log(this.props.cats);
+        
+        const cat = this.props.cats.find((v) => v.id === parseInt(id))
     return (
         <>
         <Router>
@@ -39,8 +36,8 @@ class CatShow extends Component {
         </div>
 
           <Switch>
-            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.allCats } /> } />
-            <Route exact path="/catcreate" render={ (props) =>   <CatCreate cats={ this.state.allCats } /> } />
+            <Route exact path="/" />
+            <Route exact path="/catcreate" />
           </Switch>
         </Router>
         </>

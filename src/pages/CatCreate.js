@@ -56,12 +56,12 @@ class CatCreate extends Component {
             value={ this.state.form.age }
           />
           <br/>
-          <Label htmlFor="enjoys" id="enjoys">Hobby</Label>
+          <Label htmlFor="hobby" id="hobby">Hobby</Label>
           <Input
             type="text"
-            name="enjoys"
+            name="hobby"
             onChange={ this.handleChange }
-            value={ this.state.form.enjoys }
+            value={ this.state.form.hobby }
           />
         </FormGroup>
         <Button type="submit" id="submit" onClick={ this.handleSubmit }>Add New Cat</Button>
