@@ -12,9 +12,9 @@ import CatShow from "./CatShow"
 class CatIndex extends Component{ 
 
     render(){
-      console.log("INDEX PROPS", this.props.cats)
+      console.log("INDEX PROPS", this.props.cats) //returns an array of cats
         return(
-              <Router>
+              <>
                 <div>
                   <a href="/catcreate/" id="button"><Button>Add New Cat</Button></a>
                   <br/>
@@ -39,7 +39,7 @@ class CatIndex extends Component{
                 <br/>
                 <br/>
                 <br/>
-              </Router>
+              </>
         )
       }
 }

@@ -12,10 +12,9 @@ class App extends Component{
    this.state = {
      cats: [],
    }
-   this.getCats()
  }
 
- componentWillMount(){
+ componentDidMount(){
     	this.getCats()
     }
 
@@ -61,8 +60,11 @@ class App extends Component{
         <Router>
           <Switch>
             <Route exact path="/catcreate" render={ (props) => <CatCreate handleSubmit={ this.createCat } /> } />
+
             <Route exact path="/cat/:id" render={ (props) => <CatShow {...props} cats={ this.state.cats }/> }/>
-            <Route exact path="/" render={ (props) =>   <CatIndex cats={ this.state.cats } /> } />
+
+            <Route exact path="/" render={ (props) => <CatIndex cats={ this.state.cats } /> } />
+            
           </Switch>
         </Router>
 
